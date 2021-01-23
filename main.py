@@ -60,8 +60,8 @@ def train():
     (x_train, y_train) = load_dataset(TRAIN_DIR)
     (x_test, y_test) = load_dataset(TEST_DIR)
 
-    x_train = x_train / 255.0
-    x_test = x_test / 255.0
+    x_train = np.array(x_train) / 255.0
+    x_test = np.array(x_test) / 255.0
 
     x_test = tf.Variable(x_test)
 
